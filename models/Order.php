@@ -36,7 +36,7 @@ class Order extends \yii\db\ActiveRecord
     {
         return [
             [['created_at', 'updated_at'], 'safe'],
-            [['sum', 'phone'], 'required'],
+            [['name','phone'], 'required'],
             [['sum'], 'number'],
             [['status'], 'string'],
             [['name', 'phone'], 'string', 'max' => 255],
@@ -49,7 +49,7 @@ class Order extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
+            'id' => 'Номер заказа',
             'created_at' => 'Время создания',
             'updated_at' => 'Время обновления',
             'sum' => 'Сумма',

@@ -18,7 +18,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'sum')->textInput() ?>
 
-    <?= $form->field($model, 'status')->dropDownList([ '0', '1', ], ['prompt' => '']) ?>
+    <?= $form->field($model, 'status')->dropDownList([ 'Не завершен', 'Завершен', ]) ?>
 
     <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
 

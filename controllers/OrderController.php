@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\OrderItems;
 use Yii;
 use app\models\Order;
 use app\models\OrderSearch;
@@ -52,8 +53,10 @@ class OrderController extends Controller
      */
     public function actionView($id)
     {
+        $orderItems = OrderItems::find()->where(['order_id'=>$id])->all();
         return $this->render('view', [
             'model' => $this->findModel($id),
+            'orderItems' => $orderItems,
         ]);
     }
 

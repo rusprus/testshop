@@ -80,7 +80,7 @@ class CartController extends Controller
         if ($order->load(Yii::$app->request->post())){
 //            $order->sum = $session['sum'];
             $order->sum = $session['cart.sum'];
-            $order->status = 1;
+//            $order->status = 'Не з';
             if($order->save()){
                 $this->saveOrderItem($session['cart'], $order->id);
                 unset(Yii::$app->session['cart']);
