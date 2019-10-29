@@ -31,8 +31,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'updated_at',
             'sum',
             'status',
-            //'name',
-            //'phone',
+            'name',
+            'phone',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

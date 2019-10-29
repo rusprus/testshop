@@ -27,7 +27,7 @@ class Cart extends ActiveRecord
         }
 
         if(isset($_SESSION['cart.sum'])){
-            $_SESSION['cart.sum'] += $_SESSION['cart'][$product->id]['sum'];
+            $_SESSION['cart.sum'] += $_SESSION['cart'][$product->id]['price'];
         }else {
             $_SESSION['cart.sum'] = $_SESSION['cart'][$product->id]['sum'];
         }
